@@ -1,0 +1,25 @@
+<div class="card-detail p-mt-3" *ngIf="pokemon$ | async as pokemon">
+  <i class="pi pi-times p-m-1 close-card-detail" (click)="closeCardDetail()"></i>
+  <div class="d-flex align-items-center">
+    <div class="w-50 text-center">
+      <img
+        src="{{ pokemon.sprites.front_default }}"
+        alt="pokemon-front-default"
+      />
+      <h5>
+        <strong>{{ pokemon.name.toUpperCase() }}</strong> ({{ pokemon.id }})
+      </h5>
+      <p>{{ pokemon.types[0].type.name.toUpperCase() }}</p>
+    </div>
+    <div class="w-50">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let stat of pokemon.stats">
+            <th scope="row">{{ stat.stat.name }}</th>
+            <td>{{ stat.base_stat }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

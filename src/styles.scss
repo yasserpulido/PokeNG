@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  height: 100vh;
+  background-color: #ffeaa7;
+  font-family: 'Poppins', sans-serif;
+}
+
+.p-button {
+  background-color: #0984e3;
+  border: 2px solid #2d3436;
+  border-bottom: 6px solid #2d3436;
+  border-radius: 0px;
+}
+
+.p-button:enabled:hover {
+  border-color: #2d3436;
+}
+
+.p-button:enabled:active {
+  border-bottom: 2px solid #2d3436;
+}
+
+.p-button:enabled:focus {
+  box-shadow: none;
+}
+
+thead, tbody, tfoot, tr, td, th {
+  border-style: none;
+}
+
+footer {
+  height: 50px;
+
+  a{
+    color: #2d3436;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #2d3436;
+  }
+
+  a:hover, a:active, a:focus {
+    outline: none;
+  }
+}
